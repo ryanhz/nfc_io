@@ -6,6 +6,7 @@ void main() {
   const MethodChannel channel = MethodChannel('nfc_io');
 
   setUp(() {
+    TestWidgetsFlutterBinding.ensureInitialized();
     channel.setMockMethodCallHandler((MethodCall methodCall) async {
       return '42';
     });
